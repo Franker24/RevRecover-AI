@@ -1,7 +1,6 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import { GoogleGenAI, Type } from "@google/genai";
-import { createServer as createViteServer } from "vite";
 import { PRESET_DATASETS } from "./src/data/presets.ts";
 import {
   AuditReportResult,
@@ -540,6 +539,7 @@ Return JSON with:
 // Vite Integration & Server Bootstrapping
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
