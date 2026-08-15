@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import path from "path";
 import { GoogleGenAI, Type } from "@google/genai";
-import { PRESET_DATASETS } from "./src/data/presets.ts";
+import { PRESET_DATASETS } from "./src/data/presets";
 import {
   AuditReportResult,
   AuditRequestPayload,
@@ -12,7 +12,7 @@ import {
   AutomationWebhookSnippet,
   ActionGenerationRequest,
   GeneratedActionResponse
-} from "./src/types.ts";
+} from "./src/types";
 
 const app = express();
 const PORT = 3000;

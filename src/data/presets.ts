@@ -1,4 +1,4 @@
-import { PresetDataset } from '../types.ts';
+import { PresetDataset } from '../types';
 
 export const PRESET_DATASETS: PresetDataset[] = [
   {
